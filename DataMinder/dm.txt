@@ -1,0 +1,453 @@
+0{INDEX}
+
+Program functions:
+[Main menu]11					[Print options]32
+[Filename:]10					[Create design]12
+
+Keyboard:
+[Menu keys]2					[Filename prompt keys]3
+[Form editing keys]4				[Form creation keys]5
+[Printer options keys]6				[Universal keys]7
+
+Useful tables:
+[Search specification]20				[Print specification]31
+
+Errors:
+[Not enough memory for sort!]101			[Screen form has no fields!]104
+[Screen form has too many fields!]105 		[Can't copy file to itself!]103
+[Not enough room!]48	 			[Not a DATA-MINDER file!]108
+\
+1{HELP on HELP}
+
+To use HELP:
+
+ *  Select the topic you want to know more about using the arrow keys
+ *  Press <ENTER> to see the help screen for that topic
+ *  Press <BREAK> to exit HELP
+ *  Use the function keys to quickly move to a screen:
+	<SHIFT> <F1> for the index
+	<SHIFT> <F2> to display this screen (HELP on HELP)
+	<SHIFT> <F3> for help with key combinations
+
+See also: [Index]0\
+2{Menu keys}
+
+Keys that work within a menu:
+
+Move up one item		 <UP>
+Move down one item	       <DOWN>
+Move to upper item	  <SHIFT><UP>
+Move to lowermost item	<SHIFT><DOWN>
+Select item		      <ENTER>
+
+ *  If the items in a menu are numbered, press a number to select an item.
+\
+3{Filename prompt keys}
+
+Keys that work while typing a filename:
+
+Move left			<LEFT>
+Move right		       <RIGHT>
+Move to beginning	 <SHIFT><LEFT>
+Move to end		<SHIFT><RIGHT>
+Delete character to		  <F2>
+  right of cursor
+Delete character to	 <CLEAR><LEFT>
+  left of cursor
+Toggle insert/overtype		  <F3>
+Accept filename		       <ENTER>
+Return to main menu	       <BREAK>
+\
+4{Form editing keys}
+
+Keys used for data entry:
+
+Move to start of field	  <SHIFT><LEFT>
+Move to end of field	  <SHIFT><RIGHT>
+Move to first field	  <SHIFT><UP>
+Move to last field	  <SHIFT><DOWN>
+Clear the current field	  <SHIFT><CLEAR>
+
+Move to any of the pages in a form with these keys:
+Move to next page	  <CONTROL><N>
+Move to previous page	  <CONTROL><P>
+
+Use these keys ONLY within SEARCH or ADD
+Print form		  <CONTROL><O>
+Remove form		  <CONTROL><R>
+
+See also: [Universal keys]7\
+5{Form creation keys}
+
+Keys used for form creation:
+
+Move to start of line	  <SHIFT><LEFT>
+Move to end of line	  <SHIFT><RIGHT>
+Move to top of screen	  <SHIFT><UP>
+Move to bottom of screen  <SHIFT><DOWN>
+Split the line at cursor  <CONTROL><S>
+Join line with following  <CONTROL><L>
+  line
+
+Add up to 32 pages in a file using these keys:
+Move to next page	  <CONTROL><N>
+Move to previous page	  <CONTROL><P>
+
+See also: [Universal keys]7\
+6{Printer options keys}
+
+Keys that work with options screen:
+
+Move left			<LEFT>
+Move right		       <RIGHT>
+Move up one field		  <UP>
+Move down one field		<DOWN>
+Delete character to		  <F2>
+  right of cursor
+Delete character to	 <CLEAR><LEFT>
+  left of cursor
+Toggle insert/overtype		  <F3>
+Accept options			  <F1>
+Return to main menu	       <BREAK>
+
+See also: [Universal keys]7\
+7{Universal keys}
+
+Keys that can be used anywhere in the program:
+
+Complete operation		   <F1>
+Toggle insert/overtype		   <F3>
+Delete to right of cursor	   <F2>
+Delete to left of cursor  <CLEAR><LEFT>
+Start (or stop)		   <CONTROL><U>
+  recording keystrokes
+Replay the keystrokes	     <CLEAR><1>
+Return to main menu		<BREAK>\
+10{Filename:}
+
+
+DATA-MINDER is waiting for you to type in the name of a DATA-MINDER file.
+After you are done typing the filename, just press <ENTER> to load the file.\
+11{Main menu}
+
+
+The main menu has seven options:
+
+[Add]15		- adds a form at the end of the file
+[Search]20	- searches for a data form
+[Copy]25		- copies data forms or screen forms to another file
+[Print]31		- prints data forms to the printer or to a file
+[Remove]40	- removes specified data forms
+[Modify design]45 - modifies previously created screen forms\
+12{Create design}
+
+
+This mode allows you to create the fields and titles that make up a screen
+design.  Just move the cursor anywhere on the screen and type.
+Remember these rules:
+
+ *  Any text with a colon after it will be considered a field.
+ *  All other text will be treated as a title.
+ *  You can have up to 32 separate pages in a form design.
+ *  For best results, the colons in field names should line up vertically.
+
+{Special keys:}
+
+<CONTROL> <P>	- move to the previous page (if it exists)
+<CONTROL> <N>	- move to the next page (only 32 pages are allowed)
+
+See also: [Form creation keys]5\
+13{File doesn't exist}
+
+
+The file that you want to read does not exist!!
+
+ *  If you want to create this file, select "YES."
+ *  If you don't want to create this file, select "NO."\
+15{Add form}
+
+
+The data you type into this form will be added to the end of the file.
+
+{Special keys:}
+
+<CONTROL> <P>	- move to previous page (if it exists)
+<CONTROL> <N>	- move to next page (only 32 pages are allowed)\
+20{Search specification}
+
+Search for any form in the file by filling in these codes:
+ /	- not (opposite result of search)
+ @	- any character except a space
+ ..	- any characters
+ =	- numeric equal
+ >	- numeric greater than
+ <	- numeric less than
+ =x..y	- any number from x to y
+
+Here are some examples of results of searches:
+ b@t		- bat, bit
+ b..t		- boat, bright, breakfast
+ /bat		- any word except bat
+ ..d..n..	- any word with "d" followed by "n" (dragon, define, dynamic)
+ >5.3		- 5.6, 8, $181.72
+ =1.5..8.8	- 2.1, 8.1, 5\
+21{Search}
+
+
+DATA-MINDER has found a form that matches your search specification.  You can
+modify this form and the modifications will be saved to disk.
+{Special keys:}
+
+<CONTROL> <C>	- saves changes and moves to the next matching form
+<CONTROL> <O>	- prints the current form
+<CONTROL> <R>	- removes the current form
+<BREAK>		- return to main menu without saving changes\
+22{Forms found}
+
+
+DATA-MINDER found this many forms.  Press any key to return to the main menu.\
+23{Remove form}
+
+
+DATA-MINDER is about to remove the current form!
+
+ *  If you want to delete it, select "YES"
+ *  If you don't, select "NO"\
+25{Copy options}
+
+
+There are three options:
+Copy whole file		- copies entire file (design and forms) to a new file
+Copy design		- copies design to a new file
+Copy forms		- copies forms to an existing file, which must have the
+			   same design
+
+See also: [File to copy to:]26\
+26{File to copy to:}
+
+
+Type in the filename that you want to copy to.  If you are copying only
+selected forms, then the file to copy to must already exist.  If you are
+copying the entire file or the design, then the file to copy to will be
+ created by DATA-MINDER.\
+27{Forms copied}
+
+
+DATA-MINDER has copied this many forms.  Press any key to return to the main
+menu.\
+28{File exists}
+
+
+The file that you want to copy over already exists!  If you copy over it,
+it will be destroyed!
+
+ *  If you want to copy over the file, select "YES"
+ *  If you want to return to the main menu, select "NO"\
+31{Print specification}
+
+
+Print out forms by filling in these codes:
+ F	- print field data
+ X	- print field data and end line
+ +	- print field data and two spaces
+ ?	- print accompanying formatting only if field contains data
+ ,	- print formatting only if field contains no data (use after "?")
+ C	- print names in last name, first name format in proper order
+ "	- print data until next double quote
+ '	- print data until next single quote
+ /	- print end of line
+Put one of these sort types first in a field for a sort:
+ S	- alphanumeric sort
+ N	- ascending numeric sort
+ D	- date sort (mm/dd/yy)
+ E	- European date sort (dd/mm/yy)\
+32{Print options}
+
+
+Set these options to control the printout
+ Print device:		- *PR for printer, filename for a file
+ Line length :		- number of characters per line (used for word-wrap)
+ Page length :		- number of lines per page (used for labels)
+ Field names :		- should field names be printed before data?
+ LF after CR :		- should a LF follow a CR (needed for some printers)?
+ Left margin :		- number of spaces to print for margin
+ Pause between pages:	- should DATA-MINDER pause between every page it
+			   prints?\
+33{Continue printing?}
+
+
+You pressed <BREAK> during printing.
+
+ *  If you want to continue printing, select "YES
+ *  If you want to stop printing, select "NO"\
+34{Press any key to continue}
+
+
+DATA-MINDER has just printed a page.  Press a key to print the next page.\
+35{Forms printed}
+
+
+DATA-MINDER printed this many forms.  Press any key to return to the main
+menu.\
+36{Printing error}
+
+
+DATA-MINDER has encountered an error during printing.  Correct the error and
+try again.\
+40{Remove specification}
+
+
+This remove specification determines which data forms will be removed.  Be very
+careful not to accidentally delete forms that you want to keep.  The remove
+specification format is exactly the same as the [search specification]20\
+41{Forms removed}
+
+
+DATA-MINDER removed this many forms.  Press any key to return to the main
+menu.\
+42{Remove all?}
+
+
+This function will delete all your data forms!!  If this is a mistake, then
+select NO immediately!!
+
+ *  If you do want to delete all your data forms, select "YES"
+ *  If you don't want to, select "NO"
+ *  If you want to be asked about each form, select "QUERY"\
+43{Remove selected forms?}
+
+
+DATA-MINDER is about to remove all forms that match your specification.
+
+ *  If you want to delete these forms, select "YES"
+ *  If you don't want to, select "NO"
+ *  If you want to be asked about each form, select "QUERY"\
+45{Modify design menu}
+
+
+This menu lets you alter your screen forms without destroying any of your
+data.  You can select from two types of modification:
+
+[Add/delete/move fields]46
+[Rename fields]47
+
+Always work on a backup copy of your file, just in case you make a mistake.\
+46{Add/delete/move fields}
+
+
+This option lets you do three things at the same time:
+
+Add field    - type in the new field name where you want it to go
+Delete field - type over the old field name with spaces
+Move field   - type the name of the field where you want it to go, duplicating
+		the name EXACTLY, then type over the old name with spaces
+
+You can press <BREAK> at any time to exit without saving the current page.
+Always work on a backup copy of your file, just in case you make a mistake.
+
+See also: [Rename fields]47\
+47{Rename fields}
+
+
+The option lets you rename existing screen fields, simply by typing over the
+old name with a new name.  You CANNOT add, delete, or remove fields in this
+mode, because the order of the data might change.
+
+You can press <BREAK> at any time to exit without saving the current page.
+Always work on a backup copy of your file, just in case you make a mistake.
+
+See also: [Add/delete/move fields]46\
+48{Not enough room}
+
+
+There is not enough room to save the current screen form to disk!
+Unfortunately, if it can't be saved, then your entire file will be destroyed.
+You can try removing titles and fields until the form is small enough to be
+saved.  If you have a backup copy of the file, then you might just want to exit
+and use the other copy.
+In the future, be sure there is enough room on the disk before you alter the
+screen form.
+
+ *  If you want to destroy the file, select "YES"
+ *  If you want to edit the screen form again, select "NO"\
+55{Exit}
+
+
+You are about to exit DATA-MINDER and return to the operating system.
+
+ *  If you want to exit, select "YES"
+ *  If you want to return to the main menu, select "NO"\
+100{DOS Error}
+
+
+There is no help entry for this error.  Look in your DOS manual for a full
+explanation.\
+101{Not enough memory for sort}
+
+
+There is not enough memory to attempt the sort.  You can either free up some
+high memory, or try to print again without a sort.\
+103{Can't copy a file to itself}
+
+
+Your source and destination filenames are the same!  Change one of the
+filenames and try again.\
+104{Screen form has no fields}
+
+
+DATA-MINDER requires that a screen form have at least one field.  Add a field
+and try again.\
+105{Screen form has too many fields}
+
+
+DATA-MINDER allows a maximum of 128 field per screen.  Reduce the number of
+fields and try again.\
+106{Help error}\
+107{File format not supported}
+
+
+This file was created by a previous version of DATA-MINDER.\
+108{Not a DATA-MINDER file}
+
+
+The file that you indicated was not created by DATA-MINDER!  Type in an
+appropriate filename and try again.\
+109{Write protected disk}
+
+
+The file you wanted to read is on a write protected disk!  Either remove the
+write-protect tab, or use another disk.\
+110{Illegal file name}
+
+
+This filename is not in the correct format!  The correct format allows only the
+letters "A" through "Z", and the numbers "0" through "9".  A number cannot be
+the first character of the filename.  A proper filename is of the form:
+  FILENAME/EXT.PASSWORD
+
+Type in the corrected filename and try again.\
+111{File not in directory}
+
+
+The file you wanted to load could not be found.  You might not have the proper
+disk in a disk drive, or you may have mistyped the filename.  An open drive
+door is another possibility.  Depending on your problem, either put in the
+correct disk, re-type the filename, or shut the drive door and try again.\
+112{Disk space full}
+
+
+There is not enough space left on the disk to complete the save.  You can free
+up space on the disk and try again, or you can move the file to a disk with
+more room.\
+113{Illegal drive number}
+
+
+The drive that you specified is not in your system.  Either you made a mistake
+in typing, or there might be a hardware problem.  Try re-typing the filename.
+If that doesn't work, look in your DOS manual for additional information.\
+114{File access denied}
+
+
+The file you wanted to load is password protected.  Either the password you
+specified is wrong, or you didn't specify one.  Use the correct password and
+try again.\
