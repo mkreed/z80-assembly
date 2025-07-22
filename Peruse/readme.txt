@@ -1,0 +1,1 @@
+Peruse is my favorite TRS-80 program that I ever wrote. It is a file management utility that allows copying, moving, renaming, and deleting files. Best of all, it can preview many file types, including tokenized BASIC and graphics files. It served as my inspiration for my TRSTools utility. Only the Model 4 version was ever released.

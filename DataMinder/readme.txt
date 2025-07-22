@@ -1,0 +1,1 @@
+DataMinder was a database program that I wrote for the TRS-80 Model 4 that sold during the 1990's. DataMinder's unusual design was caused by the fact that it was based on pfs:file, a database program that was quite still popular, despite not having been sold for years.
