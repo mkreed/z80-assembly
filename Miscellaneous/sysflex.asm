@@ -1,5 +1,4 @@
 *GET EQUATES
-*GET MACROS
 DIRRD@	EQU	18BBH		; Address of @DIRRD
 OVHK	EQU	1ABAH		; Hook into SYS loader
 LNTH	DEFL	ENDMOD-BEGIN	; Length of module

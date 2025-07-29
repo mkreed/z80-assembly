@@ -1,6 +1,5 @@
 *GET EQUATES
-*GET MACROS
-;----------------------------------------------------------
+-----------------------------------------
 ; Help File Displayer, copyright (c) 1990, by Matthew Reed
 ; Displays help file directory and lists help topics
 ;----------------------------------------------------------
